@@ -28,4 +28,5 @@ ln -s /etc/sv/brightnessctld/ /var/service/
 ```
 ## Créditos:
 - [KZWG63TF](https://www.reddit.com/user/KZWG63TF/)
+  - [Hilo de conversación](https://www.reddit.com/r/voidlinux/comments/hl29e1/how_to_reduce_brightness_on_boot/)
 
