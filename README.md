@@ -9,14 +9,14 @@ Brightnessctl sirve para leer y controlar el brillo del dispositivo.
 #### Dentro de /etc/sv/brightnessctld/run:
 ```
 #!/bin/sh
-[ -r brightness ] && brightnessctl -q set "$(cat brightness)"
-exec chpst -u nobody:video -b brightnessctl pause
+brightnessctl -q set $(cat brillo)
+exec pause
 
 ```
 #### Dentro de /etc/sv/brightnessctl/finish:
 ```
 #!/bin/sh
-brightnessctl get > brightness
+brightnessctl get > brillo
 ```
 #### Permisos:
 ```
@@ -27,6 +27,6 @@ chmod +x -R /etc/sv/brightnessctld/
 ln -s /etc/sv/brightnessctld/ /var/service/
 ```
 ## Créditos:
-- [KZWG63TF](https://www.reddit.com/user/KZWG63TF/)
+- [KZWG63TF](https://www.reddit.com/user/KZWG63TF/): Idea central.
   - [Hilo de conversación](https://www.reddit.com/r/voidlinux/comments/hl29e1/how_to_reduce_brightness_on_boot/)
 
