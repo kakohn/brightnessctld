@@ -9,7 +9,7 @@ Brightnessctl sirve para leer y controlar el brillo del dispositivo.
 #### Dentro de /etc/sv/brightnessctld/run:
 ```
 #!/bin/sh
-[ -r brightness ] && brightnessctl -q set $(cat brillo)
+[ -r brillo ] && brightnessctl -q set $(cat brillo)
 exec pause
 ```
 #### Dentro de /etc/sv/brightnessctl/finish:
