@@ -1,4 +1,4 @@
-# brightnessctld
+# brightnessctld (Void Linux)
 Brightnessctl sirve para leer y controlar el brillo del dispositivo.
 
 #### Instalar brightnessctl
