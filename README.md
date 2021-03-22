@@ -1,6 +1,11 @@
 # brightnessctld
 Brightnessctl sirve para leer y controlar el brillo del dispositivo.
 
+#### Instalar brightnessctl
+```
+# xbps-install -Su
+# xbps-install -S brightnessctl
+```
 #### Crear servicio brightnessctld:
 ```
 # mkdir /etc/sv/brightnessctld
