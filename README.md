@@ -11,13 +11,13 @@ Brightnessctl sirve para leer y controlar el brillo del dispositivo.
 # mkdir /etc/sv/brightnessctld
 # cd /etc/sv/brightnessctld/ && touch run finish
 ```
-#### Dentro de /etc/sv/brightnessctld/run:
+#### Dentro de /etc/sv/brightnessctld/run: (encargado de leer brillo al encender del dispositivo)
 ```
 #!/bin/sh
-brightnessctl -q set "$(cat brillo)"
-exec pause
+[ -r brillo ] && brightnessctl -q set "$(cat brillo)"
+exec chpst -b brightnessctl pause
 ```
-#### Dentro de /etc/sv/brightnessctl/finish:
+#### Dentro de /etc/sv/brightnessctl/finish: (encargado de escribir el brillo al apagar el dispositivo)
 ```
 #!/bin/sh
 brightnessctl get > brillo
