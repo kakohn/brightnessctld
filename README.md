@@ -24,11 +24,11 @@ Brightnessctl sirve para leer y controlar el brillo del dispositivo.
 
 #### Permisos:
 
-    chmod +x -R /etc/sv/brightnessctld/
+    # chmod +x -R /etc/sv/brightnessctld/
 
 #### Iniciar servicio:
 
-    ln -s /etc/sv/brightnessctld/ /var/service/
+    # ln -s /etc/sv/brightnessctld/ /var/service/
 
 ## Créditos:
 - [KZWG63TF](https://www.reddit.com/user/KZWG63TF/): Idea central.
