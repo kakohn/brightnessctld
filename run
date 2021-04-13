@@ -1,0 +1,3 @@
+#!/bin/sh
+[ -r brillo ] && brightnessctl -q set "$(cat brillo)"
+exec chpst -b brightnessctl pause
